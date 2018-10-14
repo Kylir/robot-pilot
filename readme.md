@@ -11,7 +11,7 @@ Here are the parts:
 + A motor driver TB6612
 + A ZeroLipo PHat and a LiPo battery to power the Pi and the motor driver
 
-The application will use the NodeJS module (`pigpio`)[https://www.npmjs.com/package/pigpio].
+The application will use the NodeJS module [`pigpio`](https://www.npmjs.com/package/pigpio).
 
 First goal is to make the robot move!
 
