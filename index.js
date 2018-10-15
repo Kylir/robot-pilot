@@ -20,7 +20,7 @@ setInterval(() => {
   bin2.digitalWrite(direction ? 0 : 1)
   
   pwma.pwmWrite(dutyCycle)
-  pwma.pwmWrite(dutyCycle)
+  pwmb.pwmWrite(dutyCycle)
   
   dutyCycle += 5
   if (dutyCycle > 255) {
@@ -29,5 +29,12 @@ setInterval(() => {
   }
 }, 200)
 
-
+process.on('SIGTERM', () => {
+  ain1.digitalWrite(0)
+  ain2.digitalWrite(0)
+  bin1.digitalWrite(0)
+  bin2.digitalWrite(0)
+  pwma.pwmWrite(0)
+  pwmb.pwmWrite(0)  
+})
 
