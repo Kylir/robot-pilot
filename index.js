@@ -6,7 +6,7 @@ const pwma = new Gpio(22, {mode: Gpio.OUTPUT})
 
 const bin1 = new Gpio(24, {mode: Gpio.OUTPUT})
 const bin2 = new Gpio(23, {mode: Gpio.OUTPUT})
-const pwmb = new Gpio(18, {mode: Gpio.OUTPUT})
+const pwmb = new Gpio(25, {mode: Gpio.OUTPUT})
 
 let direction = true
 
