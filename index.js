@@ -4,14 +4,24 @@ const ain1 = new Gpio(17, {mode: Gpio.OUTPUT})
 const ain2 = new Gpio(27, {mode: Gpio.OUTPUT})
 const pwma = new Gpio(22, {mode: Gpio.OUTPUT})
 
+const bin1 = new Gpio(24, {mode: Gpio.OUTPUT})
+const bin2 = new Gpio(23, {mode: Gpio.OUTPUT})
+const pwmb = new Gpio(18, {mode: Gpio.OUTPUT})
+
 let direction = true
 
 // Vary the PWM from 0 to 255 every 20 ms
 let dutyCycle = 0
-let interval = setInterval(() => {
+setInterval(() => {
   ain1.digitalWrite(direction ? 1 : 0)
   ain2.digitalWrite(direction ? 0 : 1)
+  
+  bin1.digitalWrite(direction ? 1 : 0)
+  bin2.digitalWrite(direction ? 0 : 1)
+  
   pwma.pwmWrite(dutyCycle)
+  pwma.pwmWrite(dutyCycle)
+  
   dutyCycle += 5
   if (dutyCycle > 255) {
     dutyCycle = 0
