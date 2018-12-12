@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Kylir/robot-pilot#readme",
   "dependencies": {
-    "dualshock-controller": "^1.1.1",
     "pigpio": "^1.1.4"
   }
 }

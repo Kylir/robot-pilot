@@ -1,3 +1,7 @@
+/*
+
+// WORK IN PROGRESS...
+
 var dualShock = require('dualshock-controller')
  
 var controller = dualShock({
@@ -18,3 +22,5 @@ controller.on('square:press', ()=> {
 controller.on('square:release', () => {
     console.log('square release')
 })
+
+*/
